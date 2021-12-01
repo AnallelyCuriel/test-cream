@@ -1,15 +1,17 @@
 About this project
-This project read API services to get registration data in JSON form and render it to view page.
-Steps:
-• Create login page, validate autentication data.
-• Create a site which renders registration fields of our Affiliate API. 
-• FetchtheregistrationfieldsfromaffiliateAPIfunction: https://platon.cf-it.at/affiliate/getRegistrationFields
+
+This project invoque API services to get registration data in JSON form and render it to the view page.
+
+• Create a login page, validate authentication data.
+• Renders registration fields of our Affiliate API. 
+• Fetch the registration fields from affiliate API function: https://platon.cf-it.at/affiliate/getRegistrationFields
 • Cache them on the server side using Redis
 • Render them via the template engine Pug and using Formio library
 • Validate the input of the registrationfields using Formio library
 
 NodeJS Express project 
-• Pug    - template engine                                                           • Redis  - as session and caching storage Affiliate API data
+• Pug    - template engine 
+• Redis  - as session and caching storage Affiliate API data
 • Gulp   - to build assets (js, sass, images etc.)
 • Formio - to render JSON in Form registration.
 • JsDocs - to document the project.
@@ -24,8 +26,6 @@ This library is a plain JavaScript form renderer and SDK for Form.io. This allow
      * Nested components, layouts, Date/Time, Select, Input Masks, and many more included features
      * Full JavaScript API SDK library on top of Form.io
 
-    Wizard Rendering
-    This library can also be used to render a form wizard within your application using the same method as rendering a form. The determiniation on whether it should render as a wizard or not is based on the display property of the form schema being set to wizard.
 
         <html>
         <head>
@@ -45,18 +45,20 @@ This library is a plain JavaScript form renderer and SDK for Form.io. This allow
 
 Getting Started
 
-1.- Clone the repo
-    git clone https://github.com/AnallelyCuriel/test-cream.git
-2.- Install NPM packages    
-    npm install
-3.- Run 
-    npm run dev
-4.- Application 
-    http://localhost:8000/
+1.	Clone the repo      
+  	git clone https://github.com/AnallelyCuriel/test-cream.git
+2.	Install NPM packages 
+  	npm install
+3. 	Run
+   	npm run dev
+4. 	Application          
+	http://localhost:8000/
+5.	Documentation        
+  	file://(local path)/test-cream/docs/index.html
 
 
 Contact
 Anallely Curiel  - anallely.curiel@gmail.com
-
 Project Link: https://github.com/AnallelyCuriel/test-cream
+
 

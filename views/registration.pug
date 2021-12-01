@@ -9,7 +9,8 @@ block content
         /**
         * - We received the JSON form API
         * - Create a dataFormioExample to create the Schema Formio need to render JSON
-        * - Create functions to set the Json data to Schema Formio
+        * - Create functions to set the Registration Json data to Schema Formio
+        * - ElementFormio objet with all parameters Formio needs
         */
         var registerForm = !{JSON.stringify(registerData)};
         dataFormioExample = {
@@ -28,7 +29,12 @@ block content
         var json = JSON.parse(registerForm);
         var dataFormio = [];
         for (var component in json.data) {
-          dataFormio.push(makeDTO(component, json.data[component].type, json.data[component].values, json.data[component].regex));
+          dataFormio.push(makeDTO(component, //label
+            json.data[component].type, //tipo
+            json.data[component].values, //values
+            json.data[component].regex,//regex
+            json.data[component].req, //req
+            json.data[component].maxlength)); //maxlength
         }
 
         function makeDTO(label, tipo, values, regex, req, maxlength) {
@@ -36,7 +42,7 @@ block content
           if (tipo == 'text') {
             tipo = 'textfield';
           }
-          if (typeof values !== 'undefined') {
+          if (typeof values !== 'undefined') { 
             var valuesSelect = [];
             for (var value in values) {
               valuesSelect.push({
@@ -53,9 +59,9 @@ block content
             key: label,
             label: label,
             validate: {
-              required: false,
+              required: req,
               minLength: "",
-              maxLength: "",
+              maxLength:maxlength,
               pattern: regex,
               custom: "",
               customPrivate: false

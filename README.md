@@ -1,26 +1,26 @@
 About this project
 
-This project invoque API services to get registration data in JSON form and render it to the view page.
+This project invoques API services to get registration data in JSON form and render it to the view page using Formio library.
 
-• Create a login page, validate authentication data.
-• Renders registration fields of our Affiliate API. 
-• Fetch the registration fields from affiliate API function: https://platon.cf-it.at/affiliate/getRegistrationFields
-• Cache them on the server side using Redis
-• Render them via the template engine Pug and using Formio library
-• Validate the input of the registrationfields using Formio library
+*	Create a login page, validate authentication data.	
+*	Renders registration fields of our Affiliate API. 	
+*	Fetch the registration fields from affiliate API function: https://platon.cf-it.at/affiliate/getRegistrationFields					
+* 	Cache them on the server side using Redis
+* 	Render them via the template enPug and using Formio library	
+* 	Validate the input of the registrationfields using Formio library													
 
 NodeJS Express project 
-• Pug    - template engine 
-• Redis  - as session and caching storage Affiliate API data
-• Gulp   - to build assets (js, sass, images etc.)
-• Formio - to render JSON in Form registration.
-• JsDocs - to document the project.
+* Pug    - template engine 
+* Redis  - as session and caching storage Affiliate API data
+* Gulp   - to build assets (js, sass, images etc.)
+* Formio - to render JSON in Form registration.
+* JsDocs - to document the project.
 
 About Formio (https://formio.github.io/formio.js/) 
 
 This library is a plain JavaScript form renderer and SDK for Form.io. This allows you to render the JSON schema forms produced by Form.io and render those within your application using plain JavaScript, as well as provides an interface SDK to communicate to the Form.io API's. The benefits of this library include.
 
-     * Plain JavaScript implementation using ES6 and Modern practices (no jQuery,      Angular, React, or any other framework dependency)
+     * Plain JavaScript implementation using ES6 and Modern practices (no jQuery,Angular, React, or any other framework dependency)
      * Renders a JSON schema as a webform and hooks up that form to the Form.io API's
      * Complete Form Builder which creates the JSON schema used to render the forms.
      * Nested components, layouts, Date/Time, Select, Input Masks, and many more included features
@@ -59,6 +59,7 @@ Getting Started
 
 Contact
 Anallely Curiel  - anallely.curiel@gmail.com
+
 Project Link: https://github.com/AnallelyCuriel/test-cream
 
 

@@ -1,0 +1,42 @@
+// global.scss
+html,
+body {
+  height: $height;
+}
+body {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color:$background-color;
+}
+.form-signin {
+  width:$width;
+  max-width: $max-width;
+  padding: $padding;
+  margin: $margin;
+}
+.form-signin .checkbox {
+  font-weight:$font-weight;
+}
+.form-signin .form-control {
+  position: $position;
+  box-sizing:$box-sizing;
+  height:$height;
+  padding: $padding;
+  font-size: $font-size;
+}
+.form-signin .form-control:focus {
+  z-index:$z-index;
+}
+.form-signin input[type="email"] {
+  margin-bottom: margin-bottom;
+  border-bottom-right-radius:$border-bottom-right-radius;
+  border-bottom-left-radius:$border-bottom-left-radius;
+}
+.form-signin input[type="password"] {
+  margin-bottom:$margin-bottom;
+  border-top-left-radius: $border-top-left-radius;
+  border-top-right-radius: $border-top-right-radius;
+}
+
+  
+  

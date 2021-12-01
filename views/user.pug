@@ -1,0 +1,15 @@
+extends layout
+block content
+  div.text-center
+  div(class="form-signin")
+    div.text-center
+      p wellCome Dear #{username}! 
+
+  div.text-center
+        form(class="form-register" method="GET" action="/registration")
+            #error
+                if error
+                    p.text-danger Error!!!
+            //register button
+            - var buttonClass=['btn', 'btn-lg', 'btn-primary', 'btn-block'];
+            button(class=buttonClass type="submit") Obtiene registros   

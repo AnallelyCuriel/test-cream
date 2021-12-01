@@ -1,0 +1,76 @@
+extends layout
+block content
+  div.text-center
+    - var h1Classes = ['h3', 'mb-3', 'font-weight-normal']
+            h1(class=h1Classes) Ingreses sus datos
+  div(id="dataFormio") 
+    script.
+      window.onload = function() {
+        /**
+        * - We received the JSON form API
+        * - Create a dataFormioExample to create the Schema Formio need to render JSON
+        * - Create functions to set the Json data to Schema Formio
+        */
+        var registerForm = !{JSON.stringify(registerData)};
+        dataFormioExample = {
+          components: [{
+              type: 'textfield',
+              key: 'firstName',
+              label: 'First Name'
+            },
+            {
+              type: 'textfield',
+              key: 'lastName',
+              label: 'Last Name'
+            }
+          ]
+        };
+        var json = JSON.parse(registerForm);
+        var dataFormio = [];
+        for (var component in json.data) {
+          dataFormio.push(makeDTO(component, json.data[component].type, json.data[component].values, json.data[component].regex));
+        }
+
+        function makeDTO(label, tipo, values, regex, req, maxlength) {
+          //console.log(values);
+          if (tipo == 'text') {
+            tipo = 'textfield';
+          }
+          if (typeof values !== 'undefined') {
+            var valuesSelect = [];
+            for (var value in values) {
+              valuesSelect.push({
+                value: values[value],
+                label: values[value]
+              })
+            }
+            var valuesAdapter = {
+              values: valuesSelect
+            };
+          }
+          elementFormio = {
+            type: tipo,
+            key: label,
+            label: label,
+            validate: {
+              required: false,
+              minLength: "",
+              maxLength: "",
+              pattern: regex,
+              custom: "",
+              customPrivate: false
+            },
+            data: typeof values !== 'undefined' ? valuesAdapter : null
+          };
+          // console.log(elementFormio)
+          return elementFormio;
+        }
+        dataFormioExample.components = dataFormio;
+        
+        Formio.createForm(document.getElementById('dataFormio'), dataFormioExample).then((form) => {
+          form.submission = {
+
+          };
+        });
+      };
+            

@@ -46,16 +46,17 @@ This library is a plain JavaScript form renderer and SDK for Form.io. This allow
 Getting Started
 
 1.- Clone the repo
-    git clone https://github.com/your_username_/Project-Name.git
-2.- Install NPM packages
+    git clone https://github.com/AnallelyCuriel/test-cream.git
+2.- Install NPM packages    
     npm install
-3.- Run
+3.- Run 
     npm run dev
-4.- Application
+4.- Application 
     http://localhost:8000/
+
 
 Contact
 Anallely Curiel  - anallely.curiel@gmail.com
 
-Project Link: https://github.com/your_username/repo_name
+Project Link: https://github.com/AnallelyCuriel/test-cream
 
